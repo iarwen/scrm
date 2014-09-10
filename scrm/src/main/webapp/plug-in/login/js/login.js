@@ -7,22 +7,22 @@ $(document).ready(function() {
 	});
 	$('#login').show().animate({
 		opacity : 1
-	}, 2000);
+	}, 100);
 	$('.logo').show().animate({
 		opacity : 1,
 		top : '32%'
-	}, 800, function() {
-		$('.logo').show().delay(1200).animate({
+	}, 100, function() {
+		$('.logo').show().delay(100).animate({
 			opacity : 1,
 			top : '1%'
 		}, 300, function() {
 			$('.formLogin').animate({
 				opacity : 1,
 				left : '0'
-			}, 300);
+			}, 100);
 			$('.userbox').animate({
 				opacity : 0
-			}, 200).hide();
+			}, 100).hide();
 		});
 	});
 

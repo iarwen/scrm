@@ -68,9 +68,10 @@ label.iPhoneCheckLabelOn span {
 <div id="successLogin"></div>
 <div class="text_success"><img src="plug-in/login/images/loader_green.gif" alt="Please wait" /> <span>登陆成功!请稍后....</span></div>
 <div id="login">
-<div class="ribbon" style="background-image: url(plug-in/login/images/typelogin.png);"></div>
 <div class="inner">
-<div class="logo"><img src="plug-in/login/images/head.png" /><img src="plug-in/login/images/foot.png" /></div>
+<div class="logo">
+<h1>用户登陆</h1>
+</div>
 <div class="formLogin">
 <form name="formLogin" id="formLogin" action="loginController.do?login" check="loginController.do?checkuser" method="post"><input name="userKey" type="hidden" id="userKey"
 	value="D1B5CC2FE46C4CC983C073BCA897935608D926CD32992B5900" />
@@ -86,7 +87,7 @@ label.iPhoneCheckLabelOn span {
 	<li><a class="uibutton normal" href="#" id="forgetpass">重置</a></li>
 </ul>
 </div>
-<div style="float: left; margin-left: 30px;"><a href="init.jsp"><span class="f_help">是否初始化数据</span></a></div>
+<div style="float: left; margin-left: 30px;display:none"><a href="init.jsp"><span class="f_help">是否初始化数据</span></a></div>
 </div>
 <div class="clear"></div>
 </div>
@@ -98,7 +99,7 @@ label.iPhoneCheckLabelOn span {
 <!--Login div-->
 <div class="clear"></div>
 <div id="versionBar">
-<div class="copyright">&copy; 版权所有 <span class="tip"><a href="#" title="JEECG 微云快速开发平台">jeecg</a> (推荐使用IE8+,谷歌浏览器可以获得更快,更安全的页面响应速度)技术支持:<a href="#" title="JEECG 微云快速开发平台">jeecg</a></span></div>
+<div class="copyright">&copy; 版权所有 <span class="tip"><a href="#" title="BASE ON JEECG">BASE ON JEECG</a> (推荐使用IE8+,谷歌浏览器可以获得更快,更安全的页面响应速度)</span></div>
 </div>
 <!-- Link JScript-->
 <script type="text/javascript" src="plug-in/jquery/jquery-1.8.3.min.js"></script>

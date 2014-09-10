@@ -179,17 +179,17 @@ a:hover {
 </div>
 <!-- 底部 -->
 <div region="south" border="false" style="height: 25px; overflow: hidden;">
-<div align="center" style="color: #CC99FF; padding-top: 2px">&copy; 版权所有 <span class="tip"><a href="http://www.jeecg.org" title=" JEECG Framework 3.4.3 GA"> JEECG Framework 3.4.3 GA</a> (推荐谷歌浏览器，获得更快响应速度) 技术支持:<a href="#" title=" JEECG Framework 3.4.3 GA">JEECG Framework 3.4.3 GA</a> </span></div>
+	
 </div>
-<div id="mm" class="easyui-menu" style="width: 150px;">
-<div id="mm-tabupdate">刷新</div>
-<div id="mm-tabclose">关闭</div>
-<div id="mm-tabcloseall">全部关闭</div>
-<div id="mm-tabcloseother">除此之外全部关闭</div>
-<div class="menu-sep"></div>
-<div id="mm-tabcloseright">当前页右侧全部关闭</div>
-<div id="mm-tabcloseleft">当前页左侧全部关闭</div>
 
+<div id="mm" class="easyui-menu" style="width: 150px;">
+	<div id="mm-tabupdate">刷新</div>
+	<div id="mm-tabclose">关闭</div>
+	<div id="mm-tabcloseall">全部关闭</div>
+	<div id="mm-tabcloseother">除此之外全部关闭</div>
+	<div class="menu-sep"></div>
+	<div id="mm-tabcloseright">当前页右侧全部关闭</div>
+	<div id="mm-tabcloseleft">当前页左侧全部关闭</div>
 </div>
 
 </body>

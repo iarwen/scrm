@@ -80,8 +80,7 @@
 <footer class="footer">
 <div class="container">
 <ul class="footer-links">
-	<li style="display: inline;">&copy; 版权所有<a href="http://www.jeecg.org" title="JEECG Framework 3.4.3 GA">JEECG Framework 3.4.3 GA</a></li>
-	<li style="display: inline;">&nbsp;(推荐谷歌浏览器，获得更快响应速度) 技术支持:<a title="JEECG Framework 3.4.3 GA版本" href="http://www.jeecg.org">JEECG Framework 3.4.3 GA</a></li>
+	<li style="display: inline;">&copy; 版权所有 <span class="tip"><a href="#" title="BASE ON JEECG">BASE ON JEECG</a> (推荐使用IE8+,谷歌浏览器可以获得更快,更安全的页面响应速度)</span></li>
 </ul>
 </div>
 </footer>
