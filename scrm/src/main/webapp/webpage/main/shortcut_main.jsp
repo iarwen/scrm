@@ -3,7 +3,7 @@
 <!DOCTYPE html >
 <html>
 <head>
-<title>JEECG 微云快速开发平台</title>
+<title>SCRM</title>
 <t:base type="jquery,easyui,tools,DatePicker,autocomplete"></t:base>
 <link rel="shortcut icon" href="images/favicon.ico">
 <style type="text/css">
@@ -123,7 +123,7 @@ a:hover {
 <div region="north" border="false" title="" style="BACKGROUND: #A8D7E9; height: 105px; padding: 1px; overflow: hidden;">
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
-		<td align="left" style="vertical-align: text-bottom"><img src="plug-in/login/images/logo.jpg"> <!--
+		<td align="left" style="vertical-align: text-bottom;display:none"><img src="plug-in/login/images/logo.jpg"> <!--
 		        <img src="plug-in/login/images/toplogo.png" width="550" height="52" alt="">-->
 		<div style="position: absolute; top: 78px; left: 33px;">JEECG Framework <span style="letter-spacing: -1px;">3.4.3 GA</span></div>
 		</td>
@@ -131,25 +131,25 @@ a:hover {
 		<table border="0" cellpadding="0" cellspacing="0">
 			<tr style="height: 25px;" align="right">
 				<td style="" colspan="2">
-				<div style="background: url(plug-in/login/images/top_bg.jpg) no-repeat right center; float: right;">
-				<div style="float: left; line-height: 25px; margin-left: 70px;"><span style="color: #386780">当前用户:</span> <span style="color: #FFFFFF">${userName }</span>&nbsp;&nbsp;&nbsp;&nbsp; <span
-					style="color: #386780">职务:</span> <span style="color: #FFFFFF">${roleName }</span></div>
-				<div style="float: left; margin-left: 18px;">
-				<div style="right: 0px; bottom: 0px;"><a href="javascript:void(0);" class="easyui-menubutton" menu="#layout_north_kzmbMenu" iconCls="icon-comturn" style="color: #FFFFFF">控制面板</a>&nbsp;&nbsp;<a
-					href="javascript:void(0);" class="easyui-menubutton" menu="#layout_north_zxMenu" iconCls="icon-exit" style="color: #FFFFFF">注销</a></div>
-				<div id="layout_north_kzmbMenu" style="width: 100px; display: none;">
-					<div onclick="openwindow('用户信息','userController.do?userinfo')">个人信息</div>
-					<div class="menu-sep"></div>
-					<div onclick="add('修改密码','userController.do?changepassword')">修改密码</div>
-					<div class="menu-sep"></div>	
-					<div onclick="add('修改首页风格','userController.do?changestyle')">首页风格</div>
-				</div>
-				<div id="layout_north_zxMenu" style="width: 100px; display: none;">
-					<div class="menu-sep"></div>
-					<div onclick="exit('loginController.do?logout','确定退出该系统吗 ?',1);">退出系统</div>
-				</div>	
-				</div>
-				</div>
+					<div style="background: url(plug-in/login/images/top_bg.jpg) no-repeat right center; float: right;">
+					<div style="float: left; line-height: 25px; margin-left: 70px;"><span style="color: #386780">当前用户:</span> <span style="color: #FFFFFF">${userName }</span>&nbsp;&nbsp;&nbsp;&nbsp; <span
+						style="color: #386780">职务:</span> <span style="color: #FFFFFF">${roleName }</span></div>
+					<div style="float: left; margin-left: 18px;">
+					<div style="right: 0px; bottom: 0px;"><a href="javascript:void(0);" class="easyui-menubutton" menu="#layout_north_kzmbMenu" iconCls="icon-comturn" style="color: #FFFFFF">控制面板</a>&nbsp;&nbsp;<a
+						href="javascript:void(0);" class="easyui-menubutton" menu="#layout_north_zxMenu" iconCls="icon-exit" style="color: #FFFFFF">注销</a></div>
+					<div id="layout_north_kzmbMenu" style="width: 100px; display: none;">
+						<div onclick="openwindow('用户信息','userController.do?userinfo')">个人信息</div>
+						<div class="menu-sep"></div>
+						<div onclick="add('修改密码','userController.do?changepassword')">修改密码</div>
+						<div class="menu-sep"></div>	
+						<div style="display: none;" onclick="add('修改首页风格','userController.do?changestyle')">首页风格</div>
+					</div>
+					<div id="layout_north_zxMenu" style="width: 100px; display: none;">
+						<div class="menu-sep"></div>
+						<div onclick="exit('loginController.do?logout','确定退出该系统吗 ?',1);">退出系统</div>
+					</div>	
+					</div>
+					</div>
 				</td>
 			</tr>
 			<tr style="height: 80px;">
@@ -177,7 +177,7 @@ a:hover {
 </c:if></div>
 </div>
 <!-- 右侧 -->
-<div collapsed="true" region="east" iconCls="icon-reload" title="辅助工具" split="true" style="width: 190px;"
+<div collapsed="false" region="east" iconCls="icon-reload" title="辅助工具" split="true" style="width: 0px;display:none"
 	data-options="onCollapse:function(){easyPanelCollapase()},onExpand:function(){easyPanelExpand()}">
 <div id="tabs" class="easyui-tabs" border="false" style="height: 240px">
 <div title="日历" style="padding: 0px; overflow: hidden; color: red;">
@@ -190,7 +190,8 @@ a:hover {
 </div>
 <!-- 底部 -->
 <div region="south" border="false" style="height: 25px; overflow: hidden;">
-<div align="center" style="color: #1fa3e5; padding-top: 2px">&copy; 版权所有 <span class="tip"><a href="http://www.jeecg.org" title="JEECG Framework 3.4.3 GA版本">JEECG Framework 3.4.3GA</a> (推荐谷歌浏览器，获得更快响应速度) 技术支持:<a href="#" title="JEECG Framework 3.4.3 GA版本">JEECG Framework 3.4.3 GA</a> </span></div>
+<div align="center" style="color: #1fa3e5; padding-top: 2px">
+	&copy; 版权所有 <span class="tip"><a href="#" title="BASE ON JEECG">BASE ON JEECG</a> (推荐使用IE8+,谷歌浏览器可以获得更快,更安全的页面响应速度)</span></div>
 </div>
 <div id="mm" class="easyui-menu" style="width: 150px;">
 <div id="mm-tabupdate">刷新</div>

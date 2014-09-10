@@ -716,7 +716,8 @@ public class UserController {
 		if(user!=null){
 			String indexStyle = request.getParameter("indexStyle");
 			if(StringUtils.isNotEmpty(indexStyle)){
-				Cookie cookie = new Cookie("JEECGINDEXSTYLE", indexStyle);
+			  //  Cookie cookie = new Cookie("JEECGINDEXSTYLE", indexStyle);
+				Cookie cookie = new Cookie("JEECGINDEXSTYLE", "shortcut");
 				//设置cookie有效期为一个月
 				cookie.setMaxAge(3600*24*30);
 				response.addCookie(cookie);
