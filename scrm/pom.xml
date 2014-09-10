@@ -788,7 +788,7 @@
 	                </configuration>
 	            </plugin>
 	    </plugins>
-		<finalName>jeecg</finalName>
+		<finalName>scrm</finalName>
 		<resources>
 			<resource>
 				<directory>src/main/java</directory>
@@ -803,21 +803,6 @@
 				<directory>src/main/resources</directory>
 			</resource>
 		</resources>
-
-		<testResources>
-			<testResource>
-				<directory>src/test/java</directory>
-				<includes>
-					<include>**/*.xml</include>
-					<include>**/*.sql</include>
-					<include>**/*.ftl</include>
-				</includes>
-				<filtering>false</filtering>
-			</testResource>
-			<testResource>
-				<directory>src/test/resources</directory>
-			</testResource>
-		</testResources>
 	</build>
 	
 </project>
