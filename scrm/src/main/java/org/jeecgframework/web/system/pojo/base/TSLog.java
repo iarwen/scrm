@@ -1,9 +1,11 @@
 package org.jeecgframework.web.system.pojo.base;
 
 import java.sql.Timestamp;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+import javax.persistence.FetchType;   
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -18,6 +20,10 @@ import org.jeecgframework.core.common.entity.IdEntity;
 @Entity
 @Table(name = "t_s_log")
 public class TSLog extends IdEntity implements java.io.Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private TSUser TSUser;
 	private Short loglevel;
 	private Timestamp operatetime;
@@ -26,7 +32,8 @@ public class TSLog extends IdEntity implements java.io.Serializable {
 	private String broswer;//用户浏览器类型
 	private String note;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	 
+	@ManyToOne (fetch = FetchType.LAZY,cascade=(CascadeType.REMOVE))
 	@JoinColumn(name = "userid")
 	public TSUser getTSUser() {
 		return this.TSUser;

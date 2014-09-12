@@ -120,12 +120,14 @@ a:hover {
 </head>
 <body class="easyui-layout" style="overflow-y: hidden" scroll="no">
 <!-- 顶部-->
-<div region="north" border="false" title="" style="BACKGROUND: #A8D7E9; height: 105px; padding: 1px; overflow: hidden;">
+<div region="north" border="false" title="" style="BACKGROUND: #A8D7E9; height: 75px; padding: 1px; overflow: hidden;">
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<tr>
-		<td align="left" style="vertical-align: text-bottom;display:none"><img src="plug-in/login/images/logo.jpg"> <!--
-		        <img src="plug-in/login/images/toplogo.png" width="550" height="52" alt="">-->
-		<div style="position: absolute; top: 78px; left: 33px;">JEECG Framework <span style="letter-spacing: -1px;">3.4.3 GA</span></div>
+		<td align="left" style="vertical-align: text-bottom;"> 
+		 	<ul class="shortcut">
+					<!-- 动态生成并赋值过来 -->
+					${primaryMenuList}
+				</ul>
 		</td>
 		<td align="right" nowrap>
 		<table border="0" cellpadding="0" cellspacing="0">
@@ -154,10 +156,7 @@ a:hover {
 			</tr>
 			<tr style="height: 80px;">
 				<td colspan="2">
-				<ul class="shortcut">
-					<!-- 动态生成并赋值过来 -->
-					${primaryMenuList }
-				</ul>
+				
 				</td>
 			</tr>
 		</table>
